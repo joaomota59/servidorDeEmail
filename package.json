@@ -1,0 +1,23 @@
+{
+  "name": "servidorDeEmail",
+  "version": "1.0.0",
+  "description": "Servidor de email simplificado, no modelo REST",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaomota59/servidorDeEmail.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaomota59/servidorDeEmail/issues"
+  },
+  "homepage": "https://github.com/joaomota59/servidorDeEmail#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
