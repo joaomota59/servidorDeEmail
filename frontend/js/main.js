@@ -5,7 +5,6 @@
     
     /*==================================================================
     [ Validate ]*/
-    var name = $('.validate-input input[name="name"]');
     var email = $('.validate-input input[name="email"]');
     var subject = $('.validate-input input[name="subject"]');
     var message = $('.validate-input textarea[name="message"]');
@@ -14,10 +13,6 @@
     $('.validate-form').on('submit',function(){
         var check = true;
 
-        if($(name).val().trim() == ''){
-            showValidate(name);
-            check=false;
-        }
 
         if($(subject).val().trim() == ''){
             showValidate(subject);
@@ -33,6 +28,32 @@
         if($(message).val().trim() == ''){
             showValidate(message);
             check=false;
+        }
+
+        if(check == true){//Então é pq passou no formulário
+            var params = new URLSearchParams(window.location.search),
+            remetente = params.get("emailRem");
+
+            window.alert(remetente)
+
+
+            let ourRequest = new XMLHttpRequest()//estabelece a conexao e recebe DATA
+            ourRequest.open('POST',`http://localhost:5000/api/usuarios`)
+            ourRequest.send(JSON.stringify(
+                { 
+                "remetente": remetente,
+                "destinatario": $(email).val().trim(),
+                "assunto": $(subject).val().trim(),
+                "corpo":$(message).val().trim(),
+                "respondida":false,
+                "encaminhada":false
+            }));
+
+            window.alert("Mensagem Enviada!")
+
+            window.history.back()//volta para a página antiga
+
+
         }
 
         return check;
@@ -60,3 +81,5 @@
     
 
 })(jQuery);
+
+

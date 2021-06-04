@@ -9,7 +9,7 @@ module.exports = {
             const usuario = await Usuarios.findById(email)
 
             if (!usuario) {//se nao encontrar o usuario
-                res.writeHead(404, { 'access-control-allow-origin': '*' })
+                res.writeHead(406, { 'access-control-allow-origin': '*' })//retorna 406 significa nao aceitavel
                 res.end()
             } else {
                 res.writeHead(200, { 'access-control-allow-origin': '*' })
@@ -36,7 +36,7 @@ module.exports = {
                 encaminhada
             }
             const novaMsg = await Usuarios.create(msg)
-            res.writeHead(201, { 'access-control-allow-origin': '*' })//201 arquivo criado
+            res.writeHead(201, { 'access-control-allow-origin': '*', 'content-type':'application/json; charset=utf-8'})//201 arquivo criado
             return res.end()  
 
         } catch (error) {
