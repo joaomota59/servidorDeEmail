@@ -1,1 +1,151 @@
-[{"email":"joaolucas@hotmail.com","msgsRecebidas":[{"remetente":"pedro@hotmail.com","assunto":"teste de mensagem","corpo":"aqui é um simples teste de mensagem","respondida":false,"encaminhada":false},{"remetente":"pedro@hotmail.com","assunto":"Segundo teste de mensagem","corpo":"aqui é um simples teste de mensagem 2","respondida":false,"encaminhada":false},{"remetente":"pedro@hotmail.com","assunto":"Segundo teste de mensagem","corpo":"aqui é um simples teste de mensagem 2","respondida":false,"encaminhada":false},{"remetente":"joaolucas@hotmail.com","assunto":"Atividade de SD","corpo":"Atividade de SD Teste","respondida":false,"encaminhada":false},{"remetente":"joaolucas@hotmail.com","assunto":"Atividade de SD testando rota","corpo":"Atividade de SD Teste","respondida":false,"encaminhada":false},{"remetente":"joaolucas@hotmail.com","assunto":"Atividade de SD testando rota2","corpo":"Atividade de SD Teste","respondida":false,"encaminhada":false}],"msgsEnviadas":[{"destinatario":"pedro@hotmail.com","assunto":"teste de mensagem22","corpo":"aqui é um simples teste de mensagem tt"},{"destinatario":"pedro@hotmail.com","assunto":"Atividade de SD","corpo":"Atividade de SD Teste"},{"destinatario":"pedro@hotmail.com","assunto":"Atividade de SD testando rota","corpo":"Atividade de SD Teste"},{"destinatario":"pedro@hotmail.com","assunto":"Atividade de SD testando rota2","corpo":"Atividade de SD Teste"},{"destinatario":"pedro@hotmail.com","assunto":"Testando envio para o Pedro","corpo":"Atividade de SD Teste"},{"destinatario":"pedro@hotmail.com","assunto":"ola","corpo":"ola"},{"destinatario":"pedro@hotmail.com","assunto":"TESTE FRONTEND","corpo":"OLA FRONT"},{"destinatario":"pedro@hotmail.com","assunto":"OLA","corpo":"olasasas"},{"destinatario":"pedro@hotmail.com","assunto":"TESSTTTEEEE","corpo":"okokokk"},{"destinatario":"pedro@hotmail.com","assunto":"ok","corpo":"ok"}]},{"email":"pedro@hotmail.com","msgsRecebidas":[{"remetente":"joaolucas@hotmail.com","assunto":"Testando envio para o Pedro","corpo":"Atividade de SD Teste","respondida":false,"encaminhada":false},{"remetente":"joaolucas@hotmail.com","assunto":"ola","corpo":"ola","respondida":false,"encaminhada":false},{"remetente":"joaolucas@hotmail.com","assunto":"TESTE FRONTEND","corpo":"OLA FRONT","respondida":false,"encaminhada":false},{"remetente":"joaolucas@hotmail.com","assunto":"OLA","corpo":"olasasas","respondida":false,"encaminhada":false},{"remetente":"joaolucas@hotmail.com","assunto":"TESSTTTEEEE","corpo":"okokokk","respondida":false,"encaminhada":false},{"remetente":"joaolucas@hotmail.com","assunto":"ok","corpo":"ok","respondida":false,"encaminhada":false}],"msgsEnviadas":[]},{"email":"leticia@hotmail.com","msgsRecebidas":[],"msgsEnviadas":[]},{"email":"joaomota59@hotmail.com","msgsRecebidas":[],"msgsEnviadas":[]}]
+[
+    {
+        "nome": "João Lucas TT",
+        "email": "joaolucas@hotmail.com",
+        "msgsRecebidas": [
+            {
+                "nome": "João Lucas TT",
+                "remetente": "joaolucas@hotmail.com",
+                "assunto": "Envio de mensagem de volta",
+                "corpo": "Mensagem enviada com sucesso",
+                "respondida": false,
+                "encaminhada": false
+            },
+            {
+                "nome": "Pedro Augusto",
+                "remetente": "pedro@hotmail.com",
+                "assunto": "Olá",
+                "corpo": "Olá amigo, como vai?",
+                "respondida": false,
+                "encaminhada": false
+            },
+            {
+                "nome": "Pedro Augusto",
+                "remetente": "pedro@hotmail.com",
+                "assunto": "Teste de mensagem",
+                "corpo": "Teste de mensagem e Teste de mensagem",
+                "respondida": false,
+                "encaminhada": false
+            }
+        ],
+        "msgsEnviadas": [
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "teste de mensagem22",
+                "corpo": "aqui é um simples teste de mensagem tt"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "Atividade de SD",
+                "corpo": "Atividade de SD Teste"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "Atividade de SD testando rota",
+                "corpo": "Atividade de SD Teste"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "Atividade de SD testando rota2",
+                "corpo": "Atividade de SD Teste"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "Testando envio para o Pedro",
+                "corpo": "Atividade de SD Teste"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "ola",
+                "corpo": "ola"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "TESTE FRONTEND",
+                "corpo": "OLA FRONT"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "OLA",
+                "corpo": "olasasas"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "TESSTTTEEEE",
+                "corpo": "okokokk"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "ok",
+                "corpo": "ok"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "OLOKINHO MEU",
+                "corpo": "OK"
+            },
+            {
+                "destinatario": "pedro@hotmail.com",
+                "assunto": "Olá",
+                "corpo": "Olá Pedro, como vai?"
+            },
+            {
+                "destinatario": "joaolucas@hotmail.com",
+                "assunto": "Envio de mensagem de volta",
+                "corpo": "Mensagem enviada com sucesso"
+            },
+            {
+                "destinatario": "leticia@hotmail.com",
+                "assunto": "Teste de mensagem",
+                "corpo": "Teste de mensagem e Teste de mensagem"
+            }
+        ]
+    },
+    {
+        "nome": "Pedro Augusto",
+        "email": "pedro@hotmail.com",
+        "msgsRecebidas": [
+            {
+                "nome": "João Lucas TT",
+                "remetente": "joaolucas@hotmail.com",
+                "assunto": "Olá",
+                "corpo": "Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.sdsdCras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.",
+                "respondida": false,
+                "encaminhada": false
+            }
+        ],
+        "msgsEnviadas": [
+            {
+                "destinatario": "joaolucas@hotmail.com",
+                "assunto": "Olá",
+                "corpo": "Olá amigo, como vai?"
+            },
+            {
+                "destinatario": "joaolucas@hotmail.com",
+                "assunto": "Teste de mensagem",
+                "corpo": "Teste de mensagem e Teste de mensagem"
+            }
+        ]
+    },
+    {
+        "nome": "Leticia",
+        "email": "leticia@hotmail.com",
+        "msgsRecebidas": [
+            {
+                "nome": "João Lucas TT",
+                "remetente": "joaolucas@hotmail.com",
+                "assunto": "Teste de mensagem",
+                "corpo": "Teste de mensagem e Teste de mensagem",
+                "respondida": false,
+                "encaminhada": true
+            }
+        ],
+        "msgsEnviadas": []
+    },
+    {
+        "nome": "Joao Mota",
+        "email": "joaomota59@hotmail.com",
+        "msgsRecebidas": [],
+        "msgsEnviadas": []
+    }
+]
