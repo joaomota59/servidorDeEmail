@@ -50,7 +50,8 @@
             }));
 
             window.alert("Mensagem Enviada!")
-
+            
+            
             window.history.back()//volta para a página antiga
 
 
@@ -83,3 +84,20 @@
 })(jQuery);
 
 
+function remetenteParm(){
+var params = new URLSearchParams(window.location.search),
+remetente = params.get("emailRem");
+
+var para = new URLSearchParams();
+para.append("emailRem", remetente);
+window.location.href = `./enviarMensagem.html?`+para.toString()
+}
+
+function backToHome(){
+    var params = new URLSearchParams(window.location.search),
+    remetente = params.get("emailRem");
+    
+    var para = new URLSearchParams();
+    para.append("email", remetente);
+    window.location.href = `./home.html?`+para.toString()
+}
