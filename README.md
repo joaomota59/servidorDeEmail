@@ -8,9 +8,9 @@ sudo apt install nodejs
 sudo apt install npm
 sudo apt install -g nodemon
 ```
-### Live Server
-Chrome: https://chrome.google.com/webstore/detail/live-server-web-extension/fiegdmejfepffgpnejdinekhfieaogmj
-Monzilla: https://addons.mozilla.org/pt-BR/firefox/addon/live-server-web-extension/
+### Live Server - Extensão
+* Chrome: https://chrome.google.com/webstore/detail/live-server-web-extension/fiegdmejfepffgpnejdinekhfieaogmj
+* Monzilla: https://addons.mozilla.org/pt-BR/firefox/addon/live-server-web-extension/
 
 
 ## Usando a aplicação - Faça os passos na respectiva ordem
