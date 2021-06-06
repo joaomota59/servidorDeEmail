@@ -8,12 +8,6 @@ sudo apt install nodejs
 sudo apt install npm
 sudo apt install -g nodemon
 ```
-### Live Server - Extensão
-* Chrome: https://chrome.google.com/webstore/detail/live-server-web-extension/fiegdmejfepffgpnejdinekhfieaogmj
-* Monzilla: https://addons.mozilla.org/pt-BR/firefox/addon/live-server-web-extension/
-> * OBS: Depois de instalar a extensão clique nela e depois ative, como na imagem abaixo:
-![Live Server](https://imgur.com/uM179l8.png)
-> * OBS2: Se você estiver usando o internet explorer, não é necessário instalar a extensão
 
 ## Usando a aplicação - Faça os passos na respectiva ordem
 
