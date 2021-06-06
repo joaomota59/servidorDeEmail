@@ -11,8 +11,9 @@ sudo apt install -g nodemon
 ### Live Server - Extensão
 * Chrome: https://chrome.google.com/webstore/detail/live-server-web-extension/fiegdmejfepffgpnejdinekhfieaogmj
 * Monzilla: https://addons.mozilla.org/pt-BR/firefox/addon/live-server-web-extension/
-> OBS: Depois de instalar a extensão clique nela e depois ative
-![Live Server](https://imgur.com/a/w6Ajsqk.png)
+> * OBS: Depois de instalar a extensão clique nela e depois ative, como na imagem abaixo:
+![Live Server](https://imgur.com/uM179l8.png)
+> * OBS2: Se você estiver usando o internet explorer, não é necessário instalar a extensão
 
 ## Usando a aplicação - Faça os passos na respectiva ordem
 
@@ -23,4 +24,5 @@ npm start
 ```
 
 ### FrontEnd
-http://127.0.0.1:5500/frontend/index.html
+Internet Explorer: Basta abrir o arquivo **index.html** dentro da pasta frontend
+Outros navegadores: Entre neste endereço: http://127.0.0.1:5500/frontend/index.html
