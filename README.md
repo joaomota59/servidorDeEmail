@@ -18,5 +18,5 @@ npm start
 ```
 
 ### FrontEnd
-* Internet Explorer: Basta abrir o arquivo **index.html** dentro da pasta frontend
-* Outros navegadores: Entre neste endereço: http://127.0.0.1:5500/frontend/index.html
+* Basta clicar no arquivo **index.html** dentro da pasta frontend
+* Os usuários cadastrados se encontram no arquivo ../backend/data/usuarios.json
