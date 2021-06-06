@@ -24,5 +24,5 @@ npm start
 ```
 
 ### FrontEnd
-Internet Explorer: Basta abrir o arquivo **index.html** dentro da pasta frontend
-Outros navegadores: Entre neste endereço: http://127.0.0.1:5500/frontend/index.html
+* Internet Explorer: Basta abrir o arquivo **index.html** dentro da pasta frontend
+* Outros navegadores: Entre neste endereço: http://127.0.0.1:5500/frontend/index.html
