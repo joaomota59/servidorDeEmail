@@ -7,12 +7,11 @@ module.exports = {
     async getUsuario(req, res, email) {//retorna se o usario está cadastrado ou nao no bd
         try {
             const usuario = await Usuarios.findById(email)
-
             if (!usuario) {//se nao encontrar o usuario
-                res.writeHead(406, { 'access-control-allow-origin': '*' })//retorna 406 significa nao aceitavel
+                res.writeHead(406, { 'access-control-allow-origin': '*'})//retorna 406 significa nao aceitavel
                 res.end()
             } else {
-                res.writeHead(200, { 'access-control-allow-origin': '*' })
+                res.writeHead(200, { 'access-control-allow-origin': '*'})
                 res.end(JSON.stringify(usuario))//retorna as informações relativas ao usuario
             }
         } catch (error) {
