@@ -25,12 +25,23 @@ ourRequest.onerror = function () {//Caso aconteça erro ao solicitar do servidor
 
 
 function renderHTML(data) {
+    let nome, remetente, assunto, corpo
     for (i = 0; i < data['msgsRecebidas'].length; i++) { //array de objetos
-        myFunction(data['msgsRecebidas'][i].nome, 
-        data['msgsRecebidas'][i].remetente,
-        data['msgsRecebidas'][i].assunto,
-        data['msgsRecebidas'][i].corpo,
-        )
+
+        if(data['msgsRecebidas'][i].encaminhada === true){// Se a msg foi encaminhada add ENC no titulo
+            nome = data['msgsRecebidas'][i].nome
+            remetente = data['msgsRecebidas'][i].remetente
+            assunto = "ENC: "+ data['msgsRecebidas'][i].assunto
+            corpo = data['msgsRecebidas'][i].corpo
+        }
+        else{
+            nome = data['msgsRecebidas'][i].nome
+            remetente = data['msgsRecebidas'][i].remetente
+            assunto = data['msgsRecebidas'][i].assunto
+            corpo = data['msgsRecebidas'][i].corpo
+        }
+        
+        myFunction(nome,remetente,assunto,corpo)
     
     }   
 
