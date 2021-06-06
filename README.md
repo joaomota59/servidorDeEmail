@@ -19,4 +19,12 @@ npm start
 
 ### FrontEnd
 * Basta clicar no arquivo **index.html** dentro da pasta frontend
-* Os usuários cadastrados se encontram no arquivo ../backend/data/usuarios.json
+
+
+### Login - Usuários
+* Alguns usuários já cadastrados:
+> * joaolucas@hotmail.com
+> * leticia@hotmail.com
+> * joaomota59@hotmail.com
+> * pedro@hotmail.com
+* Outros usuários cadastrados se encontram no arquivo ../backend/data/usuarios.json
