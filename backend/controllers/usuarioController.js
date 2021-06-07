@@ -8,10 +8,10 @@ module.exports = {
         try {
             const usuario = await Usuarios.findById(email)
             if (!usuario) {//se nao encontrar o usuario
-                res.writeHead(406, { 'access-control-allow-origin': '*'})//retorna 406 significa nao aceitavel
+                res.writeHead(406, { 'access-control-allow-origin': '*' })//retorna 406 significa nao aceitavel
                 res.end()
             } else {
-                res.writeHead(200, { 'access-control-allow-origin': '*'})
+                res.writeHead(200, { 'access-control-allow-origin': '*' })
                 res.end(JSON.stringify(usuario))//retorna as informações relativas ao usuario
             }
         } catch (error) {
@@ -34,13 +34,38 @@ module.exports = {
                 respondida,
                 encaminhada
             }
-            const novaMsg = await Usuarios.create(msg)
-            res.writeHead(201, { 'access-control-allow-origin': '*', 'content-type':'application/json; charset=utf-8'})//201 arquivo criado
-            return res.end()  
+            await Usuarios.create(msg)//cria mensagem
+            res.writeHead(201, { 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8' })//201 arquivo criado
+            return res.end()
 
         } catch (error) {
             console.log(error)
+            res.writeHead(404, { 'access-control-allow-origin': '*' })//erro ao criar mensagem
+            return res.end()
+
         }
     },
+
+    async deletarMensagem(req, res) {
+        try {
+            const body = await getPostData(req)
+            const { email, recebida, indice } = JSON.parse(body)//recebida é uma mensagem recebida e indice é o indice no array da msg selecionada
+            const msg = {
+                email,
+                recebida,
+                indice
+            }
+            await Usuarios.remove(msg)
+            res.writeHead(200, { 'access-control-allow-origin': '*'})//201 arquivo criado
+            return res.end()
+
+        } catch (error) {
+            console.log(error)
+            res.writeHead(404, { 'access-control-allow-origin': '*' })//erro ao criar mensagem
+            return res.end()
+
+        }
+
+    }
 
 }
