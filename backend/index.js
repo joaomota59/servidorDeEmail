@@ -20,7 +20,7 @@ const server = http.createServer((request, response) => {
         
         criaMensagem(request,response)
     }
-    else if(request.url === '/api/usuarios' && request.method === 'DELETE'){
+    else if(request.url === '/api/usuariosDelecao' && request.method === 'POST'){
         deletarMensagem(request,response)
 
     }
