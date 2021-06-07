@@ -1,3 +1,4 @@
+var btnResposta = "" //define como global
 
 var params = new URLSearchParams(window.location.search);
 emailParms = params.get('emailRem');
@@ -34,6 +35,12 @@ function renderHTML(data) {
             assunto = "ENC: "+ data['msgsRecebidas'][i].assunto
             corpo = data['msgsRecebidas'][i].corpo
         }
+        else if(data['msgsRecebidas'][i].respondida === true){//Se a msg foi respondida add RES no titulo
+            nome = data['msgsRecebidas'][i].nome
+            remetente = data['msgsRecebidas'][i].remetente
+            assunto = "RES: "+ data['msgsRecebidas'][i].assunto
+            corpo = data['msgsRecebidas'][i].corpo
+        }
         else{
             nome = data['msgsRecebidas'][i].nome
             remetente = data['msgsRecebidas'][i].remetente
@@ -50,6 +57,7 @@ function renderHTML(data) {
 
 
 
+
 function myFunction(nomeEntrada, emailRementente , tituloEntrada, mensagemEntrada) {
 var table = document.getElementById("table_id");
 var row = table.insertRow(1);
@@ -60,7 +68,7 @@ var actions = row.insertCell(3);
 nome.innerHTML = nomeEntrada;
 email.innerHTML = emailRementente;
 titulo.innerHTML = tituloEntrada
-actions.innerHTML = `<a href="#" onclick="return verMensagem(\``+nomeEntrada+`\`,\``+emailRementente+`\`,\``+tituloEntrada+`\`,\``+mensagemEntrada+`\`);" class="view" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Visualizar">visibility</i></a> <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Deletar">&#xE872</i></a>  <a href="#" onclick="return encaminharMensagem(\``+tituloEntrada+`\`,\``+mensagemEntrada+`\`);" class="forward" data-toggle="modal"><span title="Encaminhar" class="material-icons">east</span></a> <a href="#viewEmployeeModal" class="answer"><span class="material-icons" title="Responder">reply</span></a>`
+actions.innerHTML = `<a href="#" onclick="return verMensagem(\``+nomeEntrada+`\`,\``+emailRementente+`\`,\``+tituloEntrada+`\`,\``+mensagemEntrada+`\`);" class="view" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Visualizar">visibility</i></a> <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Deletar">&#xE872</i></a>  <a href="#" onclick="return encaminharMensagem(\``+tituloEntrada+`\`,\``+mensagemEntrada+`\`);" class="forward" data-toggle="modal"><span title="Encaminhar" class="material-icons">east</span></a> <a href="#" onclick="return responderMensagemModal(\``+tituloEntrada+`\`,\``+emailRementente+`\`)"; class="answer"><span class="material-icons" title="Responder">reply</span></a>`
 }
 
 function verMensagem(nomeEntrada,emailRementente,titulo,mensagemEntrada){
@@ -76,7 +84,7 @@ function encaminharMensagem(titulo,mensagemEntrada){
     remetente = params.get("emailRem");
 
     emailDest = window.prompt("Encaminhamento de mensagem\nSua mensagem selecionada será encaminhada!\nDigite o email do Destinatário:")
-    if (emailDest != null) {//se tiver algo na caixa de entrada entao encaminha o email para o destinatario correspondente
+    if (emailDest != null && emailDest != '') {//se tiver algo na caixa de entrada entao encaminha o email para o destinatario correspondente
         let ourRequest = new XMLHttpRequest()//estabelece a conexao e recebe DATA
         ourRequest.open('POST',`http://localhost:5000/api/usuarios`)
         ourRequest.send(JSON.stringify(
@@ -91,4 +99,57 @@ function encaminharMensagem(titulo,mensagemEntrada){
 
         window.alert("Mensagem Enviada!")
     }
+    else if(emailDest == ''){
+        window.alert("Entre com um e-mail antes de enviar!")
+    }
+    else{//Então é pq apertou no botao de cancelar, nao faz nada
+        
+    }
 }
+
+flagResponde = false//renderiza somente uma vez a construção do elemento DOM (botao de enviar mensagem) em cada div
+function responderMensagemModal(titulo,emailDestinatario){
+    if (flagResponde === false){
+    flagResponde = true
+    document.getElementById("modal-footer")
+    .insertAdjacentHTML('beforeend',
+    `<button id="envioDeResposta" onclick="msgResposta(\``+titulo+`\`,\``+emailDestinatario+`\`)" type="button" class="btn btn-success">Enviar</button>`)
+    $('#ModalMsgRespondida').modal('show')//abre o modal com a mensagem
+    }
+    else{
+        $('#ModalMsgRespondida').modal('show')//abre o modal com a mensagem
+    }
+}
+
+function msgResposta(titulo, emailDestinatario){
+            //ENVIA A RESPOSTA DA MENSAGEM
+            var mensagem = document.getElementById("form-control").value;
+
+            if(mensagem!=null && mensagem!=''){// null siginica botao de cancelar e '' é mensagem vazia
+            var params = new URLSearchParams(window.location.search),
+            remetente = params.get("emailRem");//remetente é pego pelo query
+    
+            let ourRequest = new XMLHttpRequest()//estabelece a conexao e recebe DATA
+            ourRequest.open('POST',`http://localhost:5000/api/usuarios`)
+            ourRequest.send(JSON.stringify(
+                { 
+                "remetente": remetente,
+                "destinatario": emailDestinatario,
+                "assunto": titulo,//ok
+                "corpo":mensagem,//ok
+                "respondida":true,//ok seta para true, respondida
+                "encaminhada":false//ok
+            }))
+    
+            window.alert("Mensagem Enviada!")
+        }
+        else if(mensagem == ''){
+            window.alert("Entre com alguma mensagem de reposta antes de enviar!")
+        }
+        else{//é pq o usuario clicou em cancelar
+            
+        }
+}
+
+
+

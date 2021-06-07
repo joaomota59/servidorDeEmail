@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
-    
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -82,8 +82,8 @@
         table.table tr th:first-child {
             width: 60px;
         }
-        
-        
+
+
 
         table.table tr th:last-child {
             width: 100px;
@@ -126,15 +126,15 @@
         }
 
         table.table td a.view {
-            color:#03A9F4;
+            color: #03A9F4;
         }
 
         table.table td a.delete {
             color: #F44336;
         }
-        
+
         table.table td a.answer {
-            color:#05ffa3;
+            color: #05ffa3;
         }
 
         table.table td i {
@@ -342,158 +342,61 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody id = "table_body">
-                    <!--
-                    <tr>
-                        <td>Dany Lo</td>
-                        <td>soengsouy@mail.com</td>
-                        <td>89 Chiaroscuro Rd, Portland, Phnom Penh</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Vivy Pay</td>
-                        <td>soengsouy@mail.com</td>
-                        <td>Obere Str. 57, Berlin, Battombang</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Design Web</td>
-                        <td>camobida@mail.com</td>
-                        <td>25, Joly, Paris, Takev</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chan Toly</td>
-                        <td>khmer09@mail.com</td>
-                        <td>PP San Sok, 67, Madrid, Pursat</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chan Toly</td>
-                        <td>khmer09@mail.com</td>
-                        <td>PP San Sok, 67, Madrid, Pursat</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chan Toly</td>
-                        <td>khmer09@mail.com</td>
-                        <td>PP San Sok, 67, Madrid, Pursat</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chan Toly</td>
-                        <td>khmer09@mail.com</td>
-                        <td>PP San Sok, 67, Madrid, Pursat</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Soeng Souy</td>
-                        <td>soengsouy@mail.com</td>
-                        <td>Via Monte Bianco 34, Turin, Pursat</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
+                <tbody id="table_body">
 
-                -->
-                </tbody>
-            </table>
+
+        <!-- Modal - Visualizar mensagem-->
+        <div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog"
+            aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalLongoExemplo">Vizualizando mensagem</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!--Conteudo do modal aqui-->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
         </div>
-<!-- Modal -->
-<div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="TituloModalLongoExemplo">Vizualizando mensagem</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
+
+
+
+        <!--Modal - Msg Respondida-->
+        <div class="modal fade" id="ModalMsgRespondida" tabindex="-1" role="dialog"
+            aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalLongoExemplo">Respondendo Mensagem</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <span class="input-group-text"><strong>Digite a mensagem de resposta logo abaixo:</strong></br></br></span>
+                            <textarea id= "form-control" class="form-control" aria-label="With textarea"></textarea>
+                          </div>
+                    </div>
+                    <div id ="modal-footer" class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <!--Conteudo do modal aqui-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
-<!--Modal email do remetente-->
-<div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header text-center">
-      <h4 class="modal-title w-100 font-weight-bold">Subscribe</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body mx-3">
-      <div class="md-form mb-5">
-        <i class="fas fa-user prefix grey-text"></i>
-        <input type="text" id="form3" class="form-control validate">
-        <label data-error="wrong" data-success="right" for="form3">Your name</label>
-      </div>
 
-      <div class="md-form mb-4">
-        <i class="fas fa-envelope prefix grey-text"></i>
-        <input type="email" id="form2" class="form-control validate">
-        <label data-error="wrong" data-success="right" for="form2">Your email</label>
-      </div>
 
-    </div>
-    <div class="modal-footer d-flex justify-content-center">
-      <button class="btn btn-indigo">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
-    </div>
-  </div>
-</div>
-</div>
 
-<div class="text-center">
-<a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalSubscriptionForm">Launch
-  Modal Subscription Form</a>
-</div>
 
 
     </div>
@@ -513,6 +416,6 @@ aria-hidden="true">
             $('.dataTables_length').addClass('bs-select');
         });
     </script>
-<script src="./msgRecebidas.js"></script>
+    <script src="./msgRecebidas.js"></script>
 
 </html>
