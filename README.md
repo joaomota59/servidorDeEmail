@@ -5,8 +5,6 @@ Servidor de email simplificado, no modelo REST
 
 ```shell
 sudo apt install nodejs
-sudo apt install npm
-sudo apt install -g nodemon
 ```
 
 ## Usando a aplicação - Faça os passos na respectiva ordem
@@ -14,7 +12,7 @@ sudo apt install -g nodemon
 ### BackEnd
 ```shell
 cd backend
-npm start
+node index.js
 ```
 
 ### FrontEnd
