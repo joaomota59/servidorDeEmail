@@ -26,29 +26,28 @@ ourRequest.onload = function () {
 
 
 function renderHTML(data) {
-    let nome, remetente, assunto, corpo
-    for (i = 0; i < data['msgsRecebidas'].length; i++) { //array de objetos
-
-        if (data['msgsRecebidas'][i].encaminhada === true) {// Se a msg foi encaminhada add ENC no titulo
-            nome = data['msgsRecebidas'][i].nome
-            remetente = data['msgsRecebidas'][i].remetente
-            assunto = "ENC: " + data['msgsRecebidas'][i].assunto
-            corpo = data['msgsRecebidas'][i].corpo
+    let nome, destinatario, assunto, corpo
+    for (i = 0; i < data['msgsEnviadas'].length; i++) { //array de objetos
+        if (data['msgsEnviadas'][i].encaminhada === true) {// Se a msg foi encaminhada add ENC no titulo
+            nome = data['msgsEnviadas'][i].nome
+            destinatario = data['msgsEnviadas'][i].destinatario
+            assunto = "ENC: " + data['msgsEnviadas'][i].assunto
+            corpo = data['msgsEnviadas'][i].corpo
         }
-        else if (data['msgsRecebidas'][i].respondida === true) {//Se a msg foi respondida add RES no titulo
-            nome = data['msgsRecebidas'][i].nome
-            remetente = data['msgsRecebidas'][i].remetente
-            assunto = "RES: " + data['msgsRecebidas'][i].assunto
-            corpo = data['msgsRecebidas'][i].corpo
+        else if (data['msgsEnviadas'][i].respondida === true) {//Se a msg foi respondida add RES no titulo
+            nome = data['msgsEnviadas'][i].nome
+            destinatario = data['msgsEnviadas'][i].destinatario
+            assunto = "RES: " + data['msgsEnviadas'][i].assunto
+            corpo = data['msgsEnviadas'][i].corpo
         }
         else {
-            nome = data['msgsRecebidas'][i].nome
-            remetente = data['msgsRecebidas'][i].remetente
-            assunto = data['msgsRecebidas'][i].assunto
-            corpo = data['msgsRecebidas'][i].corpo
+            nome = data['msgsEnviadas'][i].nome
+            destinatario = data['msgsEnviadas'][i].destinatario
+            assunto = data['msgsEnviadas'][i].assunto
+            corpo = data['msgsEnviadas'][i].corpo
         }
 
-        myFunction(nome, remetente, assunto, corpo, i)
+        myFunction(nome, destinatario, assunto, corpo, i)
 
     }
 
@@ -58,7 +57,7 @@ function renderHTML(data) {
 
 
 
-function myFunction(nomeEntrada, emailRementente, tituloEntrada, mensagemEntrada, indice) {
+function myFunction(nomeEntrada, emailDestinatario, tituloEntrada, mensagemEntrada, indice) {
     var table = document.getElementById("table_id");
     var row = table.insertRow(1);
     var nome = row.insertCell(0);
@@ -66,13 +65,13 @@ function myFunction(nomeEntrada, emailRementente, tituloEntrada, mensagemEntrada
     var titulo = row.insertCell(2);
     var actions = row.insertCell(3);
     nome.innerHTML = nomeEntrada;
-    email.innerHTML = emailRementente;
+    email.innerHTML = emailDestinatario;
     titulo.innerHTML = tituloEntrada
-    actions.innerHTML = `<a href="#" onclick="return verMensagem(\`` + nomeEntrada + `\`,\`` + emailRementente + `\`,\`` + tituloEntrada + `\`,\`` + mensagemEntrada + `\`);" class="view" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Visualizar">visibility</i></a> <a href="#" onclick = "return modalDelecao(\`` + indice + `\`)"; class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Deletar">&#xE872</i></a>  <a href="#" onclick="return encaminharMensagem(\`` + tituloEntrada + `\`,\`` + mensagemEntrada + `\`);" class="forward" data-toggle="modal"><span title="Encaminhar" class="material-icons">east</span></a> <a href="#" onclick="return responderMensagemModal(\`` + tituloEntrada + `\`,\`` + emailRementente + `\`)"; class="answer"><span class="material-icons" title="Responder">reply</span></a>`
+    actions.innerHTML = `<a href="#" onclick="return verMensagem(\`` + nomeEntrada + `\`,\`` + emailDestinatario + `\`,\`` + tituloEntrada + `\`,\`` + mensagemEntrada + `\`);" class="view" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Visualizar">visibility</i></a> <a href="#" onclick = "return modalDelecao(\`` + indice + `\`)"; class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Deletar">&#xE872</i></a>  <a href="#" onclick="return encaminharMensagem(\`` + tituloEntrada + `\`,\`` + mensagemEntrada + `\`);" class="forward" data-toggle="modal"><span title="Encaminhar" class="material-icons">east</span></a> <a href="#" onclick="return responderMensagemModal(\`` + tituloEntrada + `\`,\`` + emailDestinatario + `\`)"; class="answer"><span class="material-icons" title="Responder">reply</span></a>`
 }
 
-function verMensagem(nomeEntrada, emailRementente, titulo, mensagemEntrada) {
-    mensagemCompleta = "Remetente: " + nomeEntrada + '</br>' + "E-mail: " + emailRementente + "</br></br></br>Assunto:<strong> " + titulo + '</strong></br></br></br>Corpo: ' + mensagemEntrada
+function verMensagem(nomeEntrada, emailDestinatario, titulo, mensagemEntrada) {
+    mensagemCompleta = "Destinatário(a): " + nomeEntrada + '</br>' + "E-mail: " + emailDestinatario + "</br></br></br>Assunto:<strong> " + titulo + '</strong></br></br></br>Corpo: ' + mensagemEntrada
 
     document.getElementsByClassName("modal-body")[0].innerHTML = mensagemCompleta
     $('#ModalLongoExemplo').modal('show')//abre o modal com a mensagem
@@ -135,6 +134,7 @@ function msgResposta(titulo, emailDestinatario) {
     if (mensagem != null && mensagem != '') {// null siginica botao de cancelar e '' é mensagem vazia
         var params = new URLSearchParams(window.location.search),
             remetente = params.get("emailRem");//remetente é pego pelo query
+            emailDestinatario = remetente
 
         let ourRequest = new XMLHttpRequest()//estabelece a conexao e recebe DATA
         ourRequest.open('POST', `http://localhost:5000/api/usuarios`)
@@ -178,13 +178,12 @@ function msgDelecao(indice) {//email do login atual + recebida true se for das m
         email = params.get("emailRem");//remetente é pego pelo query
 
 
-
     let ourRequest = new XMLHttpRequest()//estabelece a conexao e recebe DATA
     ourRequest.open("POST", "http://localhost:5000/api/usuariosDelecao")
     ourRequest.send(JSON.stringify(
         {
             "email": email.toString(),
-            "recebida": true,
+            "recebida": false,
             "indice": parseInt(indice)
         }))
     window.alert("Mensagem excluída com sucesso!")
@@ -192,7 +191,6 @@ function msgDelecao(indice) {//email do login atual + recebida true se for das m
 
 
 }
-
 
 function backToHome(){
     var params = new URLSearchParams(window.location.search),
