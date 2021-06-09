@@ -18,7 +18,7 @@ npm start
 ```
 
 ### FrontEnd
-* Basta clicar no arquivo **index.html** dentro da pasta frontend
+* Basta clicar no arquivo **index.html** dentro da pasta **frontend**
 
 
 ### Login - Usuários
