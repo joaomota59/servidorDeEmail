@@ -1,7 +1,7 @@
 //node modules - nodemon (deixa o server)
 const http = require('http');
 const usuario = require('./data/usuarios.json')
-const { getUsuario, criaMensagem,deletarMensagem} = require('./controllers/usuarioController')
+const { getUsuario, criaMensagem,deletarMensagem,criaUsuario} = require('./controllers/usuarioController')
 
 
 const server = http.createServer((request, response) => {
@@ -22,7 +22,9 @@ const server = http.createServer((request, response) => {
     }
     else if(request.url === '/api/usuariosDelecao' && request.method === 'POST'){
         deletarMensagem(request,response)
-
+    }
+    else if(request.url === '/api/usuariosCadastro' && request.method === 'POST'){
+        criaUsuario(request,response)
     }
     /*else if (request.url.match(/\/api\/usuarios\/[^\n]+/) && request.method === 'PUT') { //rota para verificar se um usuario está cadastrado no bd
         const id = request.url.split('/')[3] //id é o terceiro elemento no slipt /api/usuarios/id

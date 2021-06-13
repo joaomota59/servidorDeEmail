@@ -34,9 +34,6 @@
             var params = new URLSearchParams(window.location.search),
             remetente = params.get("emailRem");
 
-            window.alert(remetente)
-
-
             let ourRequest = new XMLHttpRequest()//estabelece a conexao e recebe DATA
             ourRequest.open('POST',`http://localhost:5000/api/usuarios`)
             ourRequest.send(JSON.stringify(

@@ -19,6 +19,25 @@ module.exports = {
         }
     },
 
+    async criaUsuario(req,res){
+        try{
+            const body = await getPostData(req)
+            const { nome, email} = JSON.parse(body)
+            const usuario = {
+                nome,
+                email
+            }
+            await Usuarios.createUser(usuario)//cria mensagem
+            res.writeHead(201, { 'access-control-allow-origin': '*' })//201 usuario criado
+            return res.end()
+        }
+        catch(error){
+            console.log(error)
+            res.writeHead(404, { 'access-control-allow-origin': '*' })//erro ao criar usuario
+            return res.end()
+        }
+    },
+
     async criaMensagem(req, res) {//permite o usuario enviar uma mensagem para outro usuario, caso o outro n esteja cadastrado entao este é criado antes do envio da mensagem
         try {
 
@@ -34,7 +53,7 @@ module.exports = {
                 respondida,
                 encaminhada
             }
-            await Usuarios.create(msg)//cria mensagem
+            await Usuarios.createMsg(msg)//cria mensagem
             res.writeHead(201, { 'access-control-allow-origin': '*', 'content-type': 'application/json; charset=utf-8' })//201 arquivo criado
             return res.end()
 
@@ -55,7 +74,7 @@ module.exports = {
                 recebida,
                 indice
             }
-            await Usuarios.remove(msg)
+            await Usuarios.removeMsg(msg)
             res.writeHead(200, { 'access-control-allow-origin': '*'})//201 arquivo criado
             return res.end()
 
