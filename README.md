@@ -3,17 +3,17 @@ Servidor de email simplificado, no modelo REST
 
 ## Serviços Implementados
 :white_check_mark: 
-Envio de mensagens</br>
+Envio de mensagens<br/>
 :white_check_mark: 
-Listagem de mensagens</br>
+Listagem de mensagens<br/>
 :white_check_mark: 
-Deleção mensagens</br>
+Deleção mensagens<br/>
 :white_check_mark: 
-Visualização de mensagens</br>  
+Visualização de mensagens<br/> 
 :white_check_mark: 
-Encaminhamento de mensagens</br>
+Encaminhamento de mensagens<br/>
 :white_check_mark: 
-Resposta de mensagens</br>
+Resposta de mensagens<br/>
 
 
 ## Intalações necessárias
