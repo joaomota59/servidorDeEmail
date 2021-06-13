@@ -8,9 +8,11 @@ btnCadastroConta.addEventListener("click", function () {
     btnEntrar.style.display = 'none';
     btnCadastroConta.innerText = "Cadastrar"
 
-    if (!flagNovaDivCadastroUsuario)
+    if (!flagNovaDivCadastroUsuario){
         document.getElementsByClassName('input-group')[0].insertAdjacentHTML('beforeBegin', ` <div class="input-group"><span class="input-group-addon"><i class="icon_profile"></i></span><input id='nome' type="text" class="form-control" placeholder="Nome" autofocus></div>`)
-    flagNovaDivCadastroUsuario = true
+        document.getElementsByClassName('login-form')[0].insertAdjacentHTML('afterbegin',`<a href="./index.html" class="input-wrap" title="Voltar para tela de Login"><i class=" arrow_carrot-left_alt2"></i></a>`)
+    }
+        flagNovaDivCadastroUsuario = true
 
 
     let inputNome = document.getElementById("nome").value// recebe o nome do usuario digitado no campo
