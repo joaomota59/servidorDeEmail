@@ -7,7 +7,7 @@ Envio de mensagens<br/>
 :white_check_mark: 
 Listagem de mensagens<br/>
 :white_check_mark: 
-Deleção mensagens<br/>
+Deleção de mensagens<br/>
 :white_check_mark: 
 Visualização de mensagens<br/> 
 :white_check_mark: 
